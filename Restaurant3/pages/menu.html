@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Restaurant3</title>
+  <!-- sdn jquery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+  <!-- link style bootstrap 5 -->
+  <link rel="stylesheet" href="../styles/bootstrap.min.css">
+  <!-- cdn font awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+    integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!-- css animation link sdn -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <!-- link cdn owl-carousel -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- link srtle css -->
+  <link rel="stylesheet" href="../styles/styles.css">
+</head>
+
+<body>
+
+  <!-- START navbar -->
+
+  <nav class="navbar navbar-expand-lg navbar-light" dir="ltr">
+
+    <div class="container-fluid">
+      <a class="navbar-brand text-white" href="#">
+        Meal <span class="text-primary">.</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav m-auto mb-2 mb-lg-0" dir="rtl">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="../index.html">خانه</a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="menu.html">
+              منو
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">گالری</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Reserve.html">رزرو</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">مخاطب</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">درباره ما</a>
+          </li>
+        </ul>
+        <div class="d-flex">
+          <a href="#" class="btn online-order">سفارش آنلاین</a>
+          <div class="sign-in">
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- END navbar -->
+
+  <!-- START untree_co-hero -->
+
+  <section class="untree_co-hero overlay">
+    <div class="container">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-12">
+          <div class="row  justify-content-center">
+            <div class="col-md-6 text-center text-hero" data-aos="fade-up" data-aos-duration="2000">
+              <span class="mb-5">در تماس باشید</span>
+              <h1>منوی اصلی ما</h1>
+              <p>
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و
+                متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز
+              </p>
+              <a href="#" class="btn btn-danger">اکنون کاوش کنید</a>
+            </div>
+          </div>
+        </div>
+
+
+
+      </div>
+
+    </div>
+    <ul class="list-unstyled social-hero-section d-flex" data-aos="fade-left" data-aos-duration="2000">
+      <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+      <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+      <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+      <li><a href="#"><i class="bi bi-whatsapp"></i></a></li>
+    </ul>
+  </section>
+
+  <!-- END untree_co-hero -->
+
+
+  <!-- START untree_co-section -->
+
+  <section class="untree_co-section bg-1">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-12 text-center" data-aos="fade-left" data-aos-duration="2000">
+          <ul class="list-unstyled untree_co-tab-nav">
+            <li class="list active" data-filter="all-items">
+              <div class="d-flex align-items-center">
+                <img class="img-fluid" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAFNElEQVRoge2Ya2yTVRjHf+ftNtZ1Hd3YGDdxGzIVuRhhCLsIStQYMpEPoAHv8Vo1Jn4x0QgGY6IxYBZhioYY9auBRK5+AFQgBAeEjJEBMoabDsdgW9fLNtq+jx9OB2Nrt66WVpL9k+bN85zzPO//f85zLn1hFKMYxS0NlWwC/SE78GAizFpXj8Lk5BoDMFUlCyLFpCSQHwBFG7uKxVDbgXxQHUpJu0AH0IHYbShAUXJDzFfeeQHT397kdJwfmC+hAgqruyoEtRXI1R4ZK0LBcHFimjUWLBCmYhImoGiT2ylQNeCd9YCvnz03QvixSHkHCVi0fOcLwAbAEQPPiLjo9eLPtN3gMzCeaXDarpPbjoSLbXTa50XKG24G4k4eQAzLIJ+pzOWF1e5+o24PG1tY7X4FoNFp/3pgWzgBcScPIBYjjJP3owzfHHpGJaADyI6WWLQQy+AZQPExQlM/z+bBnQB4NVLeQQKU8I4oNhBnEWaYGTDE2DZgDYQVEK50+pCwg6xok9spauhd6Pxtdr0eZq3TjpNrdGyz+xiEX8xhCvPm4Pwb9mqQh4DL/dx3o7fOvl8kRGxPmACARmfWAWVKGXAWcIG6oBTHUexF8WOkOGUYJUGC08K23SyysUD6zoEBJaQqI/NM6AzcDNzyAhJ+GwWQ/aTjZT3C00D9UNfl4ZAUAXj4FHCGrLD3n2iRrBJaFXqWqkoW/pdEyRKgR91PwzXHHibGkihZAvYBkMrnsospsos8/FTFkig5AkzWAh5gFUGaCXIJWBFLqqQIUMs4g0EFwh7AHfrtjiVXcnYhQC3lBPBYf59E+Ec2FEYPMgA5UV6Mr+c1/N6FBNzTCXjtBK+mYPYaSACsEwKkZnuwZLSQlnWarOJtZE3cqiZ96Bs++9CI+TIn+xdnkuaqoqdtGb6WcWCO4K0GWCeb2ApOkzP3M6aX/qDUymAsl7kRz4A0Lk6npfMb3MefwtMV2wyKCb5mA1/zDNqPfkt7zXo59/Za6ke+k46IgBwsq6ChfifdrfrzgTEGzN7rHW6wFRipYF4NmQYoC5j+kJ0CCAS7oe1QDp11X4yYPSNYxHJowbt0Hf2V7lY7Y3LBMYdrZWOdBI6ZYAa0bSuArOLrZO3FYCsM2QrGzgDrRJCgtq1TwO+KhX90AuTw/LfoOPYJwV6FYzbkLQJXrSaUuxAc90JnHSgT8pdAxlToOqNHfXIlpGaCpwEsaTB1hSbuawaLDW5fBWmxf8kZVoAcKZ9DR20V4ofxiyGvHFp+AhFNzn4n/LNHk536JKTlQNtvukQKn9ci24+DxQpFL4Pvby0uxQ7TXoTuv8BVBym24ajEJgBP8y6CPQrHLBj/ILTsCI18KWTfp20xIf9hyCyCi7sBBVOe0CPbui8kbiUgcOWwXgsFq3XJtR3Qa6VgdfwFyJGKpfj+nIQlHSY/Dt4G8DZBWjZMeAQ6a6H3sq7hvDK48jsEPJB1FzhmQ9tBvYhz5kHmNGj9RYsd/4BeN617Q+KX6BzxFkBP+3sA5MzXO0xnrfbnlupRdYXsvHL97GvPK9PEXKd0v3Glendyn9WjnXM/BNzg+QNSMmDc/JjIQ5iDrLC66ztQz8acMUpYlY88yyW6xUpbMD/KKPm+0Zn1XH/PoBnIsdhfArUlLiyHQLdk0BQoGAF5tUVzG+CN1L3gS8+jSsyPQJVE6pMYSI0o44MLr2f+HK512LvQHRvd9wSULFWGKsFkJgoH+hN8epyZ9gCdCJ0Y1IkpNSmidp57034qzu8ZxShG8X/CvwQDu/KcfKQBAAAAAElFTkSuQmCC">
+                <span>همه</span>
+              </div>
+            </li>
+            <li class="list" data-filter="item1">
+              <div class="d-flex align-items-center">
+                <img class="img-fluid" src="../img/icon/noodles.png.webp" alt="icon1">
+                <span>پیش غدا</span>
+              </div>
+            </li>
+            <li class="list" data-filter="item2">
+              <div class="d-flex align-items-center">
+                <img class="img-fluid" src="../img/icon/hotdog.png.webp" alt="icon1">
+                <span>سالاد</span>
+              </div>
+            </li>
+            <li class="list" data-filter="item3">
+              <div class="d-flex align-items-center">
+                <img class="img-fluid" src="../img/icon/chicken.png.webp" alt="icon1">
+                <span>ماست</span>
+            </div>
+            </li>
+            <li class="list" data-filter="item4">
+              <div  class="d-flex align-items-center">
+                <img class="img-fluid" src="../img/icon/drinks.png.webp" alt="icon1">
+                <span>نوشیدنی</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-9 col-sm-12" data-aos="fade-up" data-aos-duration="2000">
+          <div class="owl-single no-dots" data-aos="fade-up" data-aos-duration="1000">
+             <!-- <div class="row d-flex align-items-center mb-4">
+              <div class="col-6">
+                <h2 class="text-black">نوشیدنی</h2>
+              </div>
+              <div class="col-md-6 d-flex justify-content-end">
+                <div class="col-6  d-flex justify-content-end number">2/4</div>
+              </div>
+            </div>  -->
+            <div class="row">
+              <div class="col-md-4 mb-3 item item1">
+                <div class="product">
+                  <div class="thumbnail">
+  
+                    
+                    <a href="#" style="background:url('../img/product/img_1.jpg.webp') no-repeat center center; background-size: cover;" alt="img" class="img-fluid img"></a>
+                    <div class="overlay">
+                      <a href="#" class="add_cart" title="خرید">
+                        <i class="bi bi-cart4"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p class="text">سس قارچ </p>
+                    <p class="price">320$</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3 item item2">
+                <div class="product">
+                  <div class="thumbnail">
+                    <a href="#" style="background:url('../img/product/img_3.jpg.webp') no-repeat center center;background-size: cover;" alt="img" class="img-fluid img"></a>
+                    <div class="overlay">
+                      <a href="#" class="add_cart" title="خرید">
+                        <i class="bi bi-cart4"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p class="text">سس قارچ </p>
+                    <p class="price">320$</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3 item item3">
+                <div class="product">
+                  <div class="thumbnail">
+                    <a href="#" style="background:url('../img/product/img_2.jpg.webp') no-repeat center center;background-size: cover;" alt="img" class="img-fluid img"></a>
+                    <div class="overlay">
+                      <a href="#" class="add_cart" title="خرید">
+                        <i class="bi bi-cart4"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p class="text">سس قارچ </p>
+                    <p class="price">320$</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3 item item1">
+                <div class="product">
+                  <div class="thumbnail">
+                    <a href="#" style="background:url('../img/product/img_4_b.jpg.webp') no-repeat center center;background-size: cover;" alt="img" class="img-fluid img"></a>
+                    <div class="overlay">
+                      <a href="#" class="add_cart" title="خرید">
+                        <i class="bi bi-cart4"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p class="text">سس قارچ </p>
+                    <p class="price">320$</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3 item item2">
+                <div class="product">
+                  <div class="thumbnail">
+                    <a href="#" style="background:url('../img/product/img_2_d.jpg.webp') no-repeat center center;background-size: cover;" alt="img" class="img-fluid img"></a>
+                    <div class="overlay">
+                      <a href="#" class="add_cart" title="خرید">
+                        <i class="bi bi-cart4"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p class="text">سس قارچ </p>
+                    <p class="price">320$</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3 item item4">
+                <div class="product">
+                  <div class="thumbnail">
+                    <a href="#" style="background:url('../img/product/img_1.jpg.webp') no-repeat center center;background-size: cover;" alt="img" class="img-fluid img"></a>
+                    <div class="overlay">
+                      <a href="#" class="add_cart" title="خرید">
+                        <i class="bi bi-cart4"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p class="text">سس قارچ </p>
+                    <p class="price">320$</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3 item item1">
+                <div class="product">
+                  <div class="thumbnail">
+  
+                    
+                    <a href="#" style="background:url('../img/product/img_1.jpg.webp') no-repeat center center; background-size: cover;" alt="img" class="img-fluid img"></a>
+                    <div class="overlay">
+                      <a href="#" class="add_cart" title="خرید">
+                        <i class="bi bi-cart4"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p class="text">سس قارچ </p>
+                    <p class="price">320$</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3 item item2">
+                <div class="product">
+                  <div class="thumbnail">
+                    <a href="#" style="background:url('../img/product/img_3.jpg.webp') no-repeat center center;background-size: cover;" alt="img" class="img-fluid img"></a>
+                    <div class="overlay">
+                      <a href="#" class="add_cart" title="خرید">
+                        <i class="bi bi-cart4"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p class="text">سس قارچ </p>
+                    <p class="price">320$</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3 item item3">
+                <div class="product">
+                  <div class="thumbnail">
+                    <a href="#" style="background:url('../img/product/img_2.jpg.webp') no-repeat center center;background-size: cover;" alt="img" class="img-fluid img"></a>
+                    <div class="overlay">
+                      <a href="#" class="add_cart" title="خرید">
+                        <i class="bi bi-cart4"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p class="text">سس قارچ </p>
+                    <p class="price">320$</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3 item item1">
+                <div class="product">
+                  <div class="thumbnail">
+                    <a href="#" style="background:url('../img/product/img_4_b.jpg.webp') no-repeat center center;background-size: cover;" alt="img" class="img-fluid img"></a>
+                    <div class="overlay">
+                      <a href="#" class="add_cart" title="خرید">
+                        <i class="bi bi-cart4"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p class="text">سس قارچ </p>
+                    <p class="price">320$</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3 item item2">
+                <div class="product">
+                  <div class="thumbnail">
+                    <a href="#" style="background:url('../img/product/img_2_d.jpg.webp') no-repeat center center;background-size: cover;" alt="img" class="img-fluid img"></a>
+                    <div class="overlay">
+                      <a href="#" class="add_cart" title="خرید">
+                        <i class="bi bi-cart4"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p class="text">سس قارچ </p>
+                    <p class="price">320$</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4 mb-3 item item4">
+                <div class="product">
+                  <div class="thumbnail">
+                    <a href="#" style="background:url('../img/product/img_1.jpg.webp') no-repeat center center;background-size: cover;" alt="img" class="img-fluid img"></a>
+                    <div class="overlay">
+                      <a href="#" class="add_cart" title="خرید">
+                        <i class="bi bi-cart4"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between">
+                    <p class="text">سس قارچ </p>
+                    <p class="price">320$</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- END untree_co-section -->
+
+
+  <!-- START section-popular -->
+
+  <section class="section-popular pt-0">
+    <div class="container">
+      <div class="row justify-content-center text-center" data-aos="fade-up" data-aos-duration="2000">
+        <span class="subtitle">پرطرفدارها</span>
+        <h3>
+          
+         <span>غذای های </span>
+         محبوب
+        </h3>
+      </div>
+      <div class="row align-items-stretch box-popular mt-5" data-aos="fade-up" data-aos-duration="2000">
+        <div class="col-6 col-lg-3 mb-4 mb-lg-0">
+          <a href="#" class="d-flex dess-item align-items-center h-100  dess-item">
+            <figure class="ms-4">
+              <img src="../img/dessert/dessert_1.png.webp" alt="dessert" class="img-fluid">
+            </figure>
+            <div class="pt-4">
+              <h3>مافین گیلاس</h3>
+              <span class="price">$230</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-lg-3 mb-4 mb-lg-0">
+          <a href="#" class="d-flex dess-item align-items-center h-100  dess-item">
+            <figure class="ms-4">
+              <img src="../img/dessert/dessert_2.png.webp" alt="dessert" class="img-fluid">
+            </figure>
+            <div class="pt-4">
+              <h3>مافین گیلاس</h3>
+              <span class="price">$230</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-lg-3 mb-4 mb-lg-0">
+          <a href="#" class="d-flex dess-item align-items-center h-100  dess-item">
+            <figure class="ms-4">
+              <img src="../img/dessert/dessert_4.png.webp" alt="dessert" class="img-fluid">
+            </figure>
+            <div class="pt-4">
+              <h3>مافین گیلاس</h3>
+              <span class="price">$230</span>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-lg-3 mb-4 mb-lg-0">
+          <a href="#" class="d-flex dess-item align-items-center h-100  dess-item">
+            <figure class="ms-4">
+              <img src="../img/dessert/dessert_5.png.webp" alt="dessert" class="img-fluid">
+            </figure>
+            <div class="pt-4">
+              <h3>مافین گیلاس</h3>
+              <span class="price">$230</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- END section-popular -->
+
+  
+  <!-- START footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="row text-end">
+        <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
+          <h4>محصولات برتر</h4>
+          <ul>
+            <li><a href="#">وب سایت مدیریت شده</a></li>
+            <li><a href="#">شهرت را مدیریت کنید</a></li>
+            <li><a href="#">ابزار قدرت</a></li>
+            <li><a href="#">خدمات بازاریابی</a></li>
+          </ul>
+        </div>
+        <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
+          <h4>لینک های سریع</h4>
+          <ul>
+            <li><a href="#">شغل ها</a></li>
+            <li><a href="#">دارایی های برند</a></li>
+            <li><a href="#">روابط سرمایه گذار</a></li>
+            <li><a href="#">شرایط استفاده از خدمات</a></li>
+          </ul>
+        </div>
+        <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
+          <h4>امکانات</h4>
+          <ul>
+            <li><a href="#">شغل ها</a></li>
+            <li><a href="#">دارایی های برند</a></li>
+            <li><a href="#">روابط سرمایه گذار</a></li>
+            <li><a href="#">شرایط استفاده از خدمات</a></li>
+          </ul>
+        </div>
+        <div class="col-xl-2 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
+          <h4>منابع</h4>
+          <ul>
+            <li><a href="#">راهنماها</a></li>
+            <li><a href="#">پژوهش</a></li>
+            <li><a href="#">کارشناسان</a></li>
+            <li><a href="#">آژانس ها</a></li>
+          </ul>
+        </div>
+        <div class="col-xl-4 col-sm-6 mb-4 mb-xl-0 single-footer-widget">
+          <h4>خبرنامه</h4>
+          <p>
+            می توانید به ما اعتماد کنید. ما فقط پیشنهادهای تبلیغاتی را ارسال می کنیم،
+
+          </p>
+          <form action="#" class="d-flex align-items-center">
+            <input type="email" class="form-control" placeholder="آدرس ایمیل را وارد کنید">
+            <a href="#" class="sub"><i class="bi bi-arrow-left"></i></a>
+          </form>
+        </div>
+        <div class="footer-bottom  row align-items-center text-center text-lg-left">
+
+          <div class="col-md-6 mt-2">
+            <ul class="text-start  text-end">
+              <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+              <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+              <li><a href="#"><i class="bi bi-telegram"></i></a></li>
+              <li><a href="#"><i class="bi bi-linkedin"></i></a></li>
+            </ul>
+          </div>
+          <div class="col-md-6">
+            <p class=" text-footer mb-2">
+              کپی رایت © 2022 کلیه حقوق محفوظ است | این قالب توسط <a href="#">فرزین</a> ساخته شده است
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- END footer -->
+
+  <!-- START BTN-SCROLL-TOP -->
+  <div class="btn-top">
+    <span><i class="bi bi-arrow-90deg-up"></i></span>
+  </div>
+  <!-- END BTN-SCROLL-TOP -->
+
+
+
+  <!-- link js boostrap  -->
+  <script src="../js/bootstrap.min.js"></script>
+  <!-- link script -->
+  <script src="../js/script.js"></script>
+  <!-- sdn jquery -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <!-- scripts animation link sdn -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <!-- font aweseome cdn -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/js/all.min.js"
+    integrity="sha512-rpLlll167T5LJHwp0waJCh3ZRf7pO6IT1+LZOhAyP6phAirwchClbTZV3iqL3BMrVxIYRbzGTpli4rfxsCK6Vw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- sdn owl-carousel -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+</body>
+
+</html>
